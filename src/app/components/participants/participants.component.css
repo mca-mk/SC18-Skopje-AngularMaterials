@@ -1,0 +1,19 @@
+mat-table{
+  margin:2% 2%;
+}
+
+.row:hover{
+  color: aquamarine;
+}
+
+.picture{
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+}
+
+
+.id_cell{
+  flex: 0 0 30px;
+}
+

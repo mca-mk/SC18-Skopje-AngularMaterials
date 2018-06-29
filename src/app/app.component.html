@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <img src="../assets/mca.png" [routerLink]="['']" class="center">
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <button mat-button [routerLink]="['/pax']" style="width: 50%">
+      Participants
+    </button>
+
+    <button mat-button [routerLink]="['/org']"  style="width: 50%">
+        Organisers
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
