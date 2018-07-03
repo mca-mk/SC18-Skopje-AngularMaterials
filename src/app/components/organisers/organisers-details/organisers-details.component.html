@@ -1,0 +1,49 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title style="height: 30px"  class="center-text">
+      <span  *ngIf="!addNewOrganiserMode && !canEdit">
+        {{selectedOrg.name}}
+      </span>
+
+    </mat-card-title>
+
+    <mat-card-subtitle>
+      
+      <button mat-button color='warn' *ngIf='canEdit' (click)="addOrganiser()" class="editBtn"> Save  </button>
+      <button mat-button color='warn' *ngIf='!canEdit' (click)="toggleEditMode()" class="editBtn"> Edit</button>
+
+    </mat-card-subtitle>
+    <mat-card-content>
+      <div class="img-container">
+        <img *ngIf="!addNewOrganiserMode" src={{selectedOrg.picture}}>
+      </div>
+
+      <div class="info">
+        <mat-form-field class="data-field">
+          <input matInput  placeholder="Name" [readonly]="!canEdit" [(ngModel)]=selectedOrg.name>
+        </mat-form-field>
+
+        <mat-form-field class="data-field">
+          <input matInput  placeholder="Gender" [readonly]="!canEdit"  [(ngModel)]="selectedOrg.gender">
+        </mat-form-field>
+
+        <mat-form-field class="data-field">
+          <input matInput  placeholder="Age" [readonly]="!canEdit" [(ngModel)]="selectedOrg.age">
+        </mat-form-field>
+
+        <mat-form-field class="data-field">
+          <input matInput  placeholder="University" [readonly]="!canEdit" [(ngModel)]="selectedOrg.university">
+        </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Picture Url" [readonly]="!canEdit"  [(ngModel)]="selectedOrg.picture" >
+          </mat-form-field>
+      
+        </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+
+    </mat-card-actions>
+  </mat-card>
+</div>

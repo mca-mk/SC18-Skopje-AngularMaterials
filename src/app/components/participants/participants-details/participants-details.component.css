@@ -1,0 +1,47 @@
+.center-text{
+    text-align: center;
+  }
+  
+  .img-container{
+    width: 350px;
+    height: 400px;
+    margin-right: 60px;
+  }
+  
+  img{
+    width: inherit;
+    height: inherit;
+  }
+  
+  mat-card-content{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .info-data{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .mat-form-field-placeholder {
+    display:block !important;
+  }
+  .info{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+  
+  .data-field{
+    width:100% !important;
+  }
+  
+  .editBtn{
+  width: 50px;
+  float:right;
+  }
+  
+  mat-card-subtitle{
+    text-align: end;
+  }

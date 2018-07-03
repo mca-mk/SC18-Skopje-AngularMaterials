@@ -17,7 +17,6 @@ export class OrganisersComponent implements OnInit {
 
     orgData: Organiser[];
     dataSource;
-    
 
     displayedColumns: string[] = ['id', 'picture', 'name', 'university', 'age'];
 
@@ -26,13 +25,15 @@ export class OrganisersComponent implements OnInit {
     this.dataService.getOrganisers().subscribe(
       result => {
         this.orgData = result;
-      });
-      this.dataSource = this.orgData;
+      },
+    error => {
+      this.router.navigateByUrl(`org`);
+    });
 
+      this.dataSource = this.orgData;
   }
 
   selectRow(selectedOrganiser: Organiser) {
-
-    this.router.navigateByUrl(`/org/${selectedOrganiser.id}`);
+    this.router.navigateByUrl(`org/${selectedOrganiser.id}`);
   }
 }

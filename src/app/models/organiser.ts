@@ -5,6 +5,4 @@ export class Organiser {
   university: string;
   picture: string;
   gender: string;
-  favouriteDrink: string;
-  memebershipStatus: string;
 }

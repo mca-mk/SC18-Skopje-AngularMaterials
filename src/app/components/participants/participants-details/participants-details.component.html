@@ -1,0 +1,43 @@
+<div class="container">
+    <mat-card>
+      <mat-card-title class="center-text">
+        {{selectedPax.name}}
+  
+      </mat-card-title>
+  
+      <mat-card-subtitle>
+        
+        <button mat-button color='warn' (click)="toggleEditMode()" class="editBtn"> {{canEdit === true ? 'Save' : 'Edit'}}  </button>
+  
+      </mat-card-subtitle>
+      <mat-card-content>
+        <div class="img-container">
+          <img src={{selectedPax.picture}}>
+        </div>
+  
+  
+        <div class="info">
+          <mat-form-field class="data-field">
+            <input matInput  placeholder="Name" [readonly]="!canEdit" [(ngModel)]=selectedPax.name>
+          </mat-form-field>
+  
+          <mat-form-field class="data-field">
+            <input matInput  placeholder="University" [readonly]="!canEdit" [(ngModel)]="selectedPax.university">
+          </mat-form-field>
+  
+          <mat-form-field class="data-field">
+            <input matInput  placeholder="Country" [readonly]="!canEdit"  [(ngModel)]="selectedPax.country">
+          </mat-form-field>
+
+          <mat-form-field class="data-field">
+              <input matInput  placeholder="Gender" [readonly]="!canEdit" [(ngModel)]="selectedPax.gender">
+            </mat-form-field>
+        </div>
+  
+      </mat-card-content>
+      <mat-card-actions>
+  
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  

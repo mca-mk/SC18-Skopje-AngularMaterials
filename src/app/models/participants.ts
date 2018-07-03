@@ -1,7 +1,7 @@
 export class Participant {
   id: number;
   name: string;
-  age: string;
+  age: number;
   country: string;
   university: string;
   picture: string;

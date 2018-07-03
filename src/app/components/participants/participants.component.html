@@ -22,12 +22,21 @@
         <mat-header-cell *matHeaderCellDef> University </mat-header-cell>
         <mat-cell *matCellDef="let element"> {{element.university}} </mat-cell>
       </ng-container>
-  \
+  
   <ng-container matColumnDef="age">
       <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{element.age}} </mat-cell>
     </ng-container>
 
+    <ng-container matColumnDef="addNew">
+        <mat-footer-cell *matFooterCellDef>
+          <button color=accent mat-raised-button style="width:100%">Add New</button>
+        </mat-footer-cell>
+      </ng-container>
+
+
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row (click)="selectRow(row)" *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      <mat-footer-row *matFooterRowDef="['addNew']" class="example-second-footer-row"></mat-footer-row>
+
     </mat-table>

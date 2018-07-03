@@ -29,6 +29,6 @@ export class ParticipantsComponent implements OnInit {
 
   selectRow(selectedOrganiser: Participant) {
 
-    this.router.navigateByUrl(`/org/${selectedOrganiser.id}`);
+    this.router.navigateByUrl(`/pax/${selectedOrganiser.id}`);
   }
 }
